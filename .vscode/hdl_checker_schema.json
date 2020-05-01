@@ -1,0 +1,109 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "hdl_checker",
+    "required": ["source"],
+    "properties": {
+        "source": {
+            "type": "array",
+            "description": "List of source files",
+            "examples": [
+                [   
+                    "*.vhd",
+                    "**/*.vhd",
+                    ["**/*.vhd", "*.vhd", {"flags": ["-2008"], "library": "foo"} ]
+                ]
+            ]
+        },
+        "include": {
+            "type": "array",
+            "description": "Add other hdl_checker.configs for source include"
+        },
+        "vhdl": {
+            "type": "object",
+            "minProperties": 1,
+            "description": "Add VHDL specific options",
+            "properties": {
+                "flags": {
+                    "type": "object",
+                    "minProperties": 1,
+                    "description": "Language specific flags",
+                    "properties": {
+                        "single": {
+                            "type": "array",
+                            "description": "Used to build the file being checked"
+                        },
+                        "dependencies": {
+                            "type": "array",
+                            "description": "Used to build the dependencies of the file being checked"
+                        },
+                        "global": {
+                            "type": "array",
+                            "description": "Used on both target and its dependencies"
+                        }
+                    }
+                }
+            }
+        },
+        "verilog": {
+            "type": "object",
+            "minProperties": 1,
+            "description": "Verilog specific options",
+            "properties": {
+                "flags": {
+                    "type": "object",
+                    "minProperties": 1,
+                    "description": "Language specific flags",
+                    "properties": {
+                        "single": {
+                            "type": "array",
+                            "description": "Used to build the file being checked"
+                        },
+                        "dependencies": {
+                            "type": "array",
+                            "description": "Used to build the dependencies of the file being checked"
+                        },
+                        "global": {
+                            "type": "array",
+                            "description": "Used on both target and its dependencies"
+                        }
+                    }
+                }
+            }
+        },
+        "systemverilog": {
+            "type": "object",
+            "minProperties": 1,
+            "description": "Systemverilog specific options",
+            "properties": {
+                "flags": {
+                    "type": "object",
+                    "minProperties": 1,
+                    "description": "Language specific flags",
+                    "properties": {
+                        "single": {
+                            "type": "array",
+                            "description": "Used to build the file being checked"
+                        },
+                        "dependencies": {
+                            "type": "array",
+                            "description": "Used to build the dependencies of the file being checked"
+                        },
+                        "global": {
+                            "type": "array",
+                            "description": "Used on both target and its dependencies"
+                        }
+                    }
+                }
+            }
+        },
+        "builder": {
+            "type": "string",
+            "description": "HDL Compiler to use",
+            "enum": [
+                "msim",
+                "xvhdl",
+                "ghdl"
+            ]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "**/_hdl_checker.config",
+                "**/.hdl_checker.config"
+            ],
+            "url": ".vscode/hdl_checker_schema.json"
+        }
+    ]
+}
