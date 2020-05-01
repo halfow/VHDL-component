@@ -22,8 +22,9 @@ __Requirements:__
 TBD
 
 ## Errata
-`build.tcl` is untested as no src in template.
+`build.tcl` is untested as no src in template. Xilinx specific
 `_hdl_checker.config` is windows naming scheme `.hdl_checker.config` should be used under linux
+`[_.]hdl_checker.config` "builder", need to match the simulator used
 
 # Component Description
 Write component documentation here
