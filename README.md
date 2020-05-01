@@ -27,6 +27,6 @@ TBD
 `[_.]hdl_checker.config` "builder", need to match the simulator used
 
 # Component Description
-Write component documentation here
-use `src/Design_Description.md` for more indepth design
+Write component documentation here.    
+Use `src/Design_Description.md` for more indepth design.    
 Descripe your tests under `test/Teset_Description.md`
