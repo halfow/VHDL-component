@@ -2,13 +2,13 @@
 
 __Requirements:__
 
-|Tool          |Version |Note         |
-|:-------------|-------:|:------------|
-|Vivado 64-bit | 2019.2|              | 
-|Modelsim      | 2019.2|              |
-|Python        |  >=3.6|              |
-|Vunit         |  4.4.0|Python Package|
-|Colorama      |  0.4.3|Python Package|
+|Tool            |Version |Note            |
+|:---------------|-------:|:---------------|
+|Vivado          | 2019.2 | 64-bit         | 
+|Modelsim        | 2019.2 | 64-bit         |
+|Python          |  >=3.6 |                |
+|Vunit           |  4.4.0 | Python Package |
+|Colorama        |  0.4.3 | Python Package |
 ---------------------------------------
 
 ## Run Tests
@@ -28,3 +28,5 @@ TBD
 
 # Component Description
 Write component documentation here
+use `src/Design_Description.md` for more indepth design
+Descripe your tests under `test/Teset_Description.md`
