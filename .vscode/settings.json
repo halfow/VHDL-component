@@ -1,4 +1,9 @@
 {
+    "files.exclude": {
+        "**/_hdl_checker/": true,
+        "**/vunit_out/": true,
+        "**/.vscode/": true
+    },
     "json.schemas": [
         {
             "fileMatch": [
