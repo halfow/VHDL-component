@@ -5,7 +5,7 @@ __Requirements:__
 |Tool            |Version |Note            |
 |:---------------|-------:|:---------------|
 |Vivado          | 2019.2 | 64-bit         | 
-|Modelsim        | 2019.2 | 64-bit         |
+|Modelsim        | 2019.4 | 64-bit         |
 |Python          |  >=3.6 |                |
 |Vunit           |  4.4.0 | Python Package |
 |Colorama        |  0.4.3 | Python Package |

@@ -11,8 +11,11 @@ end entity tb_tb;
 
 architecture tb of tb_tb is
     constant clk_period : time := 10 ns;
-    signal clk : std_logic := '1'; 
-    signal rst : std_logic := '0';
+    constant delay      : natural := 20;
+    signal clk          : std_logic := '1'; 
+    --signal rst          : std_logic := '0';
+    signal a, b         : std_logic_vector(15 downto 0);
+    
 begin
     clk <=  not clk after clk_period/2;
 
@@ -25,7 +28,15 @@ begin
         
         elsif run("fail_test") then
             check(false);
+
+        elsif run("run delay") then
+            wait until clk;
+            a <= x"BEEF";
+            wait for clk_period*(delay);
+            check(true);
         end if;
         test_runner_cleanup(runner);
     end process;
+
+    c0: entity work.test generic map (delay) port map (clk,a,b);
 end architecture tb;
